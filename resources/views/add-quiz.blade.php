@@ -33,7 +33,7 @@
             <span class="text-green-500 font-bold">Quiz: {{session('quizDetails')->name}}</span>
             <p class="text-green-500 font-bold">Total MCQs: {{$totalMCQs}}
                 @if ($totalMCQs>0)
-                    <span class="text-yellow-500 text-sm"><a href="/show-quiz/{{session('quizDetails')->id}}">Show All</a></span>
+                    <span class="text-yellow-500 text-sm"><a href="/show-quiz/{{session('quizDetails')->id}}/{{session('quizDetails')->category}}">Show All</a></span>
                 @endif
             </p>
             <h2 class="text-2xl text-center text-gray-800 mb-6 ">Add MCQ's</h2>
