@@ -14,7 +14,13 @@
         <h2 class="text-lg text-center text-blue-400 font-bold mb-6 ">This Quiz contain {{$quizCount}} questions and no limit to attempt this quiz</h2>
         <h1 class="text-2xl text-center text-green-800 font-bold mb-6 ">Good luck !!!</h1>
 
-        <a type="submit" href="user-signup" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Login/Signup to start Quiz</a>
+        @if (session('user'))
+        <a type="submit" href="" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Start Quiz</a>
+            
+        @else
+        <a type="submit" href="/user-signup-quiz" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Login/Signup to start Quiz</a>
+        @endif
+        
 
         
     </div>

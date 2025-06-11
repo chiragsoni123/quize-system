@@ -7,8 +7,14 @@
                 <a class="text-gray-700 hover:text-blue-500" href="/">Home</a>
 
                 <a class="text-gray-700 hover:text-blue-500" href="/admin-categories">Categories</a>
+                @if (session('user'))
+                <a class="text-gray-700 hover:text-blue-500" href="">Welcome {{session('user')->name}}</a>
+                <a class="text-gray-700 hover:text-blue-500" href="/user-logout">Logout</a> 
+                @else
                 <a class="text-gray-700 hover:text-blue-500" href="">Login</a>
                 <a class="text-gray-700 hover:text-blue-500" href="/user-signup">Signup</a>
+                @endif
+                
                 <a class="text-gray-700 hover:text-blue-500" href="">Blog</a>        
             </div>
         </div>
