@@ -15,10 +15,13 @@
         <h1 class="text-2xl text-center text-green-800 font-bold mb-6 ">Good luck !!!</h1>
 
         @if (session('user'))
-        <a type="submit" href="" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Start Quiz</a>
+        <a type="submit" href="/mcq/{{session('firstMCQ')->id.'/'.$quizName}}" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Start Quiz</a>
             
         @else
-        <a type="submit" href="/user-signup-quiz" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Login/Signup to start Quiz</a>
+        <a type="submit" href="/user-signup-quiz" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Signup to start Quiz</a>
+        
+        <a type="submit" href="/user-login-quiz" class=" bg-blue-500 rounded-md px-4 py-3 my-5 cursor-pointer text-white">Login to start Quiz</a>
+        
         @endif
         
 
